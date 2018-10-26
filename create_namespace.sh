@@ -12,7 +12,7 @@ if [ -z "$1" ]; then
 fi
 NAMESPACE=$1
 
-if [[ $(kubectl get namespace | grep -x $NAMESPACE | wc -l) -eq 0 ]]; then
+if ! kubectl get namespace $NAMESPACE ; then
   echo "Create namespace $NAMESPACE..."
   kubectl create namespace $NAMESPACE
 fi
