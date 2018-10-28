@@ -28,7 +28,7 @@ echo "deploymentProject":"$7"
 echo "source" : "$8"
 echo "ciBackLink" : "$9"
 echo "JenkinsUrl" : "${10}"
-echo "BuildUrl" : "${11}"
+echo "GitBranch" : "${11}"
 echo "GitCommit" : "${12}"
 
 PAYLOAD=$(cat <<EOF
@@ -53,7 +53,7 @@ PAYLOAD=$(cat <<EOF
   "ciBackLink" : "$9",
   "customProperties" : {
     "JenkinsUrl" : "${10}",
-    "BuildUrl" : "${11}",
+    "GitBranch" : "${11}",
     "GitCommit" : "${12}"
   }
 }
