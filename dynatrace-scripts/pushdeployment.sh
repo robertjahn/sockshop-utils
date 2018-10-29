@@ -8,15 +8,15 @@
 # When used with Jenkins we suggest to define DT_TOKEN and DT_URL as Global Environment Variables - they will then get passed to your shell script automatically
 
 # Usage:
-# ./pushtag.sh ENTITYTYPE TAGCONTEXT TAGNAME TAGVALUE DEPLOYMENTNAME DEPLOYMENTVERSION DEPLOYMENTPROJECT SOURCE CILINK JENKINSURL BUILDURL GITCOMMIT
+# ./pushtag.sh ENTITYTYPE TAGCONTEXT TAGNAME TAGVALUE DEPLOYMENTNAME DEPLOYMENTVERSION DEPLOYMENTPROJECT SOURCE CILINK JENKINSURL GITBRANCH GITCOMMIT
 
 # Example from command line:
 # Pushing a Custom Deployment Event to a HOST with the tag [AWS]Environment:JenkinsTutorial
-# ./pushtag.sh HOST AWS Environment JenkinsTutorial DemoDeploy 1.0 MyProject Jenkins http://myjenkins http://myjenkins/job http://myjenins/build gitcommitid
+# ./pushtag.sh HOST AWS Environment JenkinsTutorial DemoDeploy 1.0 MyProject Jenkins http://myjenkins http://myjenkins/job mybranch gitcommitid
 
 # Example from Jenkins:
 # Pushing same Custom Deployment event using Jenkins Propeties
-# ./dynatrace-scripts/pushtag.sh HOST AWS Environment JenkinsTutorial ${BUILD_TAG} ${BUILD_NUMBER} ${JOB_NAME} Jenkins ${JENKINS_URL} ${JOB_URL} ${BUILD_URL} ${GIT_COMMIT}
+# ./dynatrace-scripts/pushtag.sh HOST AWS Environment JenkinsTutorial ${BUILD_TAG} ${BUILD_NUMBER} ${JOB_NAME} Jenkins ${JENKINS_URL} ${BUILD_URL} ${GIT_BRANCH} ${GIT_COMMIT}
 
 echo "meTypes" : "$1"
 echo "context" : "$2",
